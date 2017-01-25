@@ -1,0 +1,25 @@
+@import 'styles/variables';
+
+.stat {
+    flex: 1;
+
+    &__label {
+        font-size: .6875rem;
+    }
+
+    &__value {
+        font-family: $font-secondary;
+        font-size: 1.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__unit {
+        color: rgba($colour-white, .7);
+        font-family: $font-primary;
+        font-size: .875rem;
+        font-weight: 400;
+        margin-left: .08rem;
+        text-transform: uppercase;
+    }
+}

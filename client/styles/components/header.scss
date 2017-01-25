@@ -1,0 +1,14 @@
+.header {
+    font-size: .875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+
+    &::after {
+        border-bottom: .2rem solid;
+        content: '';
+        display: block;
+        margin-top: .3rem;
+        width: 2rem;
+    }
+}

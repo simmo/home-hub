@@ -1,0 +1,113 @@
+{
+    "devices":{
+        "smoke_co_alarms":{
+            "fo5nu6Tg_EVjISyX2pmXpdVR-0UrQP9d":{
+                "name":"Living Room",
+                "locale":"en-GB",
+                "structure_id":"sJpIvlrCk0d-d2JUG04IUEip47GCO7gEt41yimeiwgFiewIE8yqjsQ",
+                "software_version":"3.1rc9",
+                "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTh4ZJ-595dJw",
+                "device_id":"fo5nu6Tg_EVjISyX2pmXpdVR-0UrQP9d",
+                "name_long":"Living Room Nest Protect",
+                "is_online":true,
+                "last_connection":"2017-01-16T04:41:15.842Z",
+                "battery_health":"ok",
+                "co_alarm_state":"ok",
+                "smoke_alarm_state":"ok",
+                "ui_color_state":"green",
+                "is_manual_test_active":false,
+                "last_manual_test_time":"2015-10-25T12:02:48.000Z"
+            }
+        }
+    },
+    "structures":{
+        "sJpIvlrCk0d-d2JUG04IUEip47GCO7gEt41yimeiwgFiewIE8yqjsQ":{
+            "smoke_co_alarms":[
+                "fo5nu6Tg_EVjISyX2pmXpdVR-0UrQP9d"
+            ],
+            "name":"Oakdene",
+            "country_code":"GB",
+            "time_zone":"Europe/London",
+            "away":"home",
+            "structure_id":"sJpIvlrCk0d-d2JUG04IUEip47GCO7gEt41yimeiwgFiewIE8yqjsQ",
+            "wheres":{
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyQiY8IPZ7fYQQ":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyQiY8IPZ7fYQQ",
+                    "name":"Backyard"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTyzgx-yASK3w":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTyzgx-yASK3w",
+                    "name":"Basement"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTW5sjJtRrXZw":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTW5sjJtRrXZw",
+                    "name":"Bedroom"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyRsBIKM3PaWgg":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyRsBIKM3PaWgg",
+                    "name":"Den"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyRHyDvMu3gVLw":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyRHyDvMu3gVLw",
+                    "name":"Dining Room"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyRShXc8YLj4dQ":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyRShXc8YLj4dQ",
+                    "name":"Downstairs"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTPM63fdSTrOg":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTPM63fdSTrOg",
+                    "name":"Driveway"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyR0lJK079pYAA":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyR0lJK079pYAA",
+                    "name":"Entryway"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PySHLOoL4mthrg":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PySHLOoL4mthrg",
+                    "name":"Family Room"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyQhvph340DuZg":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyQhvph340DuZg",
+                    "name":"Front Yard"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyT5D0zi5vxFrA":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyT5D0zi5vxFrA",
+                    "name":"Hallway"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTDgxssgR0iYA":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTDgxssgR0iYA",
+                    "name":"Kids Room"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTDdxfpFlDHdg":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTDdxfpFlDHdg",
+                    "name":"Kitchen"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTh4ZJ-595dJw":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTh4ZJ-595dJw",
+                    "name":"Living Room"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTBF30D2qfzuA":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTBF30D2qfzuA",
+                    "name":"Master Bedroom"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyRH6FAHdyuoNQ":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyRH6FAHdyuoNQ",
+                    "name":"Office"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTalGCEIY8j_Q":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PyTalGCEIY8j_Q",
+                    "name":"Outside"
+                },
+                "zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PySDxrZq53BBmA":{
+                    "where_id":"zVngN7i3YQLW7B-pjFeNFIOTpx5kiVPrVGGQ9Fq-PySDxrZq53BBmA",
+                    "name":"Upstairs"
+                }
+            }
+        }
+    },
+    "metadata":{
+        "access_token":"c.3RnGgHkNl3fzNkNg86dc4oiv70clN5enThNaYAdaNYz68dxRCd37eJRK0M8yMNAi2X6qpUqhbx41gp6H7zNy2rDJBuUii4o2uPrYkDYEN4S7gzMoz4d4SU8qHPSpF7e1GQguqS9rRNDaHOeB",
+        "client_version":1
+    }
+}

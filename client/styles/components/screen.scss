@@ -1,0 +1,100 @@
+@import 'styles/variables';
+
+$screen-header: 4rem;
+$action-width: 1.3125rem;
+
+.screen {
+    box-sizing: border-box;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    padding-top: $screen-header;
+    position: relative;
+
+    &__header {
+        align-items: center;
+        background-image: $gradient-day;
+        box-shadow: 0 0 1px rgba($colour-black, .2);
+        box-sizing: border-box;
+        display: flex;
+        height: $screen-header;
+        justify-content: center;
+        left: 0;
+        overflow: hidden;
+        padding: 0 ($gutter + $action-width);
+        position: absolute;
+        top: 0;
+        transition-property: box-shadow, transform;
+        width: 100%;
+        z-index: 1;
+
+        &::before,
+        &::after {
+            background-attachment: fixed;
+            bottom: 0;
+            content: '';
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: opacity 10s;
+            z-index: -1;
+        }
+
+        &::before {
+            // Night
+            background-image: $gradient-night;
+        }
+
+        &::after {
+            // Twlight
+            background-image: $gradient-twilight;
+        }
+
+        .app--night &::before,
+        .app--twilight &::after {
+            opacity: 1;
+        }
+
+        &--fixed {
+            background-color: rgba($colour-almost-black, .5);
+            box-shadow: 0 0 8px rgba($colour-black, .1);
+            position: fixed;
+            transform: translateY(-150%);
+        }
+
+        &--animate {
+            transition-duration: 1s;
+        }
+
+        &--visible {
+            transform: translateY(0);
+            transition-duration: .75s;
+        }
+    }
+
+    &__title {
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0 $gutter / 2;
+    }
+
+    &__back {
+        left: $gutter;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: $action-width;
+
+        svg {
+            fill: $colour-white;
+        }
+    }
+
+    &__content {
+        box-sizing: border-box;
+        min-height: 100%;
+        padding: $gutter;
+    }
+}

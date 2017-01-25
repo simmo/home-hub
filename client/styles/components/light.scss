@@ -1,0 +1,112 @@
+@import 'styles/variables';
+@import 'styles/animations/slide';
+
+.light {
+    & + & {
+        border-top: .1rem solid rgba($colour-white, .1);
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+
+    &__primary {
+        align-items: center;
+        display: flex;
+    }
+
+    &__secondary {
+        margin-top: .75rem;
+    }
+
+    &__name {
+        flex: 1;
+        transition: opacity $field-transition-duration;
+
+        &--disabled {
+            opacity: .3;
+        }
+    }
+
+    &__state {
+        $diameter: 1.5rem;
+
+        -webkit-appearance: none;
+        background-color: rgba($colour-white, .25);
+        border-radius: $diameter;
+        box-sizing: content-box;
+        cursor: pointer;
+        margin: 0;
+        outline: 0;
+        position: relative;
+        transition: background-color .5s;
+        width: $diameter * 2;
+
+        &::after {
+            background-image: linear-gradient(135deg, $colour-white, $colour-kinda-dim-grey);
+            border-radius: $diameter;
+            box-shadow: 0 0 0 .1rem $colour-white inset, 0 0 .5rem rgba($colour-black, .1);
+            content: '';
+            display: block;
+            height: $diameter;
+            transform: translateX(0);
+            transition: transform .5s;
+            width: $diameter;
+        }
+
+        &:checked {
+            background-color: rgba($colour-white, .4);
+
+            &::after {
+                transform: translateX(100%);
+            }
+        }
+    }
+
+    &__brightness {
+        -webkit-appearance: none;
+        background-color: rgba($colour-white, .25);
+        background-image: linear-gradient(rgba($colour-white, .6), rgba($colour-very-dim-grey, .6));
+        background-repeat: no-repeat;
+        background-size: 0 100%;
+        border-radius: .5rem;
+        height: .5rem;
+        margin: .25rem 0;
+        padding: 0;
+        transition: opacity $field-transition-duration;
+        width: 100%;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &::-webkit-slider-runnable-track {
+            -webkit-appearance: none;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            background-image: linear-gradient(135deg, $colour-white, $colour-kinda-dim-grey);
+            border: 0;
+            border-radius: 100%;
+            box-shadow: 0 0 0 .1rem $colour-white inset, 0 0 .5rem rgba($colour-black, .1);
+            cursor: grab;
+            height: 1rem;
+            transform: translateY(calc(-50% + .5rem));
+            width: 1rem;
+
+            &:active {
+                cursor: grabbing;
+            }
+        }
+
+        &[disabled] {
+            opacity: .3;
+
+            &::-webkit-slider-thumb {
+                cursor: default;
+            }
+        }
+    }
+}

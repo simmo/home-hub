@@ -1,0 +1,43 @@
+@import 'styles/variables';
+
+.error {
+    align-items: center;
+    box-sizing: border-box;
+    color: $colour-white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding-bottom: 10vh;
+
+    &__title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    &__message {
+        margin: .75rem 0 0;
+    }
+
+    &__details {
+        color: rgba($colour-white, .4);
+        font-size: .8rem;
+        margin: .5rem 0 0;
+    }
+
+    &__retry {
+        background-color: transparent;
+        border: .15rem solid $colour-white;
+        border-radius: $radius;
+        color: $colour-white;
+        cursor: pointer;
+        display: inline-block;
+        font-family: inherit;
+        font-size: .9rem;
+        font-weight: 600;
+        margin: 2rem 0 0;
+        padding: .7rem 1.25rem .65rem;
+        text-transform: uppercase;
+    }
+}

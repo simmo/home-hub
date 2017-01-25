@@ -1,0 +1,47 @@
+@import 'styles/variables';
+
+.modal {
+    border-radius: $radius;
+    box-shadow: 0 0 10rem rgba($colour-black, .5);
+    color: $colour-charcoal;
+    max-width: 30em;
+    width: 100%;
+
+    &__message {
+        background-color: $colour-white;
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+        padding: $gutter / 1.5 $gutter / 2;
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    &__button {
+        background-color: $colour-dim-grey;
+        border: 0;
+        color: rgba($colour-black, .6);
+        flex: 1;
+        font-size: .8rem;
+        padding: $gutter / 2;
+        text-transform: uppercase;
+
+        &:first-child {
+            border-bottom-right-radius: $radius;
+            border-right: 0;
+        }
+
+        &:last-child {
+            border-bottom-left-radius: $radius;
+            border-left: 0;
+        }
+
+        &--confirm {
+            background-color: $colour-green;
+            color: $colour-white;
+            font-weight: 600;
+        }
+    }
+}

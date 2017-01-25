@@ -1,0 +1,24 @@
+@import 'styles/variables';
+
+.module {
+    align-items: center;
+    background-color: rgba($colour-white, .1);
+    border-radius: $radius;
+    box-sizing: border-box;
+    color: rgba($colour-white, .9);
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    justify-content: center;
+    padding: $gutter / 2;
+    width: 100%;
+
+    &__icon {
+        display: block;
+        width: 33.333%;
+    }
+
+    &__title {
+        margin: 1rem 0 0;
+    }
+}

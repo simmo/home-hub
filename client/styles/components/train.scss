@@ -1,0 +1,41 @@
+@import 'styles/variables';
+
+.train {
+    display: flex;
+
+    &__location {
+        flex: 1;
+    }
+
+    &__separator {
+        margin: 0 .75rem;
+        width: .9rem;
+
+        svg {
+            fill: $colour-white;
+        }
+    }
+
+    &__time {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    &__station {
+        font-size: 1rem;
+    }
+
+    &__status {
+        color: rgba($colour-white, .7);
+        font-size: .9rem;
+    }
+
+    &--cancelled {
+        opacity: .4;
+    }
+
+    &__location--delayed &__status {
+        color: $colour-white;
+        font-weight: 600;
+    }
+}

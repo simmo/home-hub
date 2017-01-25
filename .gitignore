@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+tmp
+public/*.js
+public/*.css
+public/*.map
+config.json
+*.log
+ecosystem.json

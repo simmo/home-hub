@@ -1,0 +1,11 @@
+@import 'styles/variables';
+
+.listing {
+    &__item {
+        & + & {
+            border-top: .1rem solid rgba($colour-white, .2);
+            margin-top: 1rem;
+            padding-top: 1rem;
+        }
+    }
+}

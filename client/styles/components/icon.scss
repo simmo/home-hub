@@ -1,0 +1,102 @@
+%square {
+    padding-top: 100%;
+}
+
+.icon {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    svg {
+        bottom: 0;
+        height: auto;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    &__text {
+        left: -9999px;
+        position: absolute;
+        visibility: hidden;
+    }
+
+    &--back {
+        @extend %square;
+    }
+
+    &--clear-day {
+        padding-top: 100%;
+    }
+
+    &--clear-night {
+        padding-top: 100%;
+    }
+
+    &--cloudy {
+        padding-top: 100%;
+    }
+
+    &--cog {
+        padding-top: 100%;
+    }
+
+    &--fog {
+        padding-top: 100%;
+    }
+
+    &--forward {
+        padding-top: 169.23%;
+    }
+
+    &--light-bulb {
+        @extend %square;
+    }
+
+    &--partly-cloudy-day {
+        padding-top: 100%;
+    }
+
+    &--partly-cloudy-night {
+        padding-top: 100%;
+    }
+
+    &--rain {
+        padding-top: 100%;
+    }
+
+    &--sleet {
+        padding-top: 100%;
+    }
+
+    &--smoke-co {
+        @extend %square;
+    }
+
+    &--snow {
+        padding-top: 100%;
+    }
+
+    &--thermometer {
+        padding-top: 100%;
+    }
+
+    &--train {
+        @extend %square;
+    }
+
+    &--umbrella {
+        padding-top: 100%;
+    }
+
+    &--wifi {
+        @extend %square;
+    }
+
+    &--wind {
+        padding-top: 100%;
+    }
+}

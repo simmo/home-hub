@@ -1,0 +1,34 @@
+$gutter: 2rem;
+$radius: .3125rem;
+$field-transition-duration: .2s;
+
+$colour-white: #FFF;
+$colour-black: #000;
+$colour-very-dim-grey: #F9F9F9;
+$colour-dim-grey: #EEE;
+$colour-kinda-dim-grey: #ECECEC;
+$colour-grey: #CCC;
+$colour-middle-grey: #999;
+$colour-green: #1ABC9C;
+$colour-dark-green: #16A085;
+$colour-blue: #3498DB;
+$colour-night: #2C3E50;
+$colour-charcoal: #222;
+$colour-almost-black: #111;
+$colour-mid-grey: #555;
+$colour-red: #C0392B;
+$colour-orange: #D35400;
+$colour-day: (#4E72C7, #6D9ED7, #A4C8D5, #B4D9E1, #C4D9D6);
+$colour-night: (#020111, #3A3A52);
+$colour-twilight: (#20202F, #273550, #416081, #ADACB2, #EAC3A2);
+
+$gradient-day: radial-gradient(circle at top left, nth($colour-day, 1) 0, nth($colour-day, 2) 34vh, nth($colour-day, 3) 67vh, nth($colour-day, 4) 84vh, nth($colour-day, 5) 100vh);
+$gradient-night: radial-gradient(circle at top left, nth($colour-night, 1), nth($colour-night, 2));
+$gradient-twilight: radial-gradient(circle at top left, nth($colour-twilight, 1) 0%, nth($colour-twilight, 2) 16%, nth($colour-twilight, 3) 41%, nth($colour-twilight, 4) 78%, nth($colour-twilight, 5) 100%);
+
+$font-primary: 'Avenir Next', sans-serif;
+$font-secondary: 'Oswald', sans-serif;
+
+@mixin panel {
+    background-color: rgba($colour-white, .1);
+}

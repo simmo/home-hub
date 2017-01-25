@@ -1,0 +1,17 @@
+@import 'styles/variables';
+
+.time {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    &__clock {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    &__date {
+        color: rgba($colour-white, .6);
+        font-size: 1.125rem;
+    }
+}

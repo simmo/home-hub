@@ -1,0 +1,155 @@
+<svg width="600px" height="1024px" viewBox="0 0 600 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#eeeeee">
+        <g>
+            <circle cx="118.5" cy="73.5" r="2.5"></circle>
+            <circle cx="269.5" cy="94.5" r="1.5"></circle>
+            <circle cx="94" cy="195" r="2"></circle>
+            <circle cx="273" cy="199" r="2"></circle>
+            <circle cx="247.5" cy="173.5" r="2.5"></circle>
+            <circle cx="184.5" cy="130.5" r="1.5"></circle>
+            <circle cx="138.5" cy="132.5" r="1.5"></circle>
+            <circle cx="36" cy="29" r="2"></circle>
+            <circle cx="154.5" cy="303.5" r="1.5"></circle>
+            <circle cx="339.5" cy="153.5" r="1.5"></circle>
+            <circle cx="329.5" cy="19.5" r="2.5"></circle>
+            <circle cx="187.5" cy="32.5" r="1.5"></circle>
+            <circle cx="52.5" cy="283.5" r="1.5"></circle>
+            <circle cx="216.5" cy="239.5" r="1.5"></circle>
+            <circle cx="40" cy="121" r="2"></circle>
+        </g>
+        <g opacity="0.7" transform="translate(271, 347)">
+            <circle cx="84.5" cy="56.5" r="2.5"></circle>
+            <circle cx="235.5" cy="77.5" r="1.5"></circle>
+            <circle cx="60" cy="178" r="2"></circle>
+            <circle cx="239" cy="182" r="2"></circle>
+            <circle cx="213.5" cy="156.5" r="2.5"></circle>
+            <circle cx="150.5" cy="113.5" r="1.5"></circle>
+            <circle cx="104.5" cy="115.5" r="1.5"></circle>
+            <circle cx="2" cy="12" r="2"></circle>
+            <circle cx="120.5" cy="286.5" r="1.5"></circle>
+            <circle cx="305.5" cy="136.5" r="1.5"></circle>
+            <circle cx="295.5" cy="2.5" r="2.5"></circle>
+            <circle cx="153.5" cy="15.5" r="1.5"></circle>
+            <circle cx="18.5" cy="266.5" r="1.5"></circle>
+            <circle cx="182.5" cy="222.5" r="1.5"></circle>
+            <circle cx="6" cy="104" r="2"></circle>
+        </g>
+        <g opacity="0.4" transform="translate(170, 193) rotate(90) translate(-170, -193) translate(16, 49)">
+            <circle cx="84.5" cy="56.5" r="2.5"></circle>
+            <circle cx="235.5" cy="77.5" r="1.5"></circle>
+            <circle cx="60" cy="178" r="2"></circle>
+            <circle cx="239" cy="182" r="2"></circle>
+            <circle cx="213.5" cy="156.5" r="2.5"></circle>
+            <circle cx="150.5" cy="113.5" r="1.5"></circle>
+            <circle cx="104.5" cy="115.5" r="1.5"></circle>
+            <circle cx="2" cy="12" r="2"></circle>
+            <circle cx="120.5" cy="286.5" r="1.5"></circle>
+            <circle cx="305.5" cy="136.5" r="1.5"></circle>
+            <circle cx="295.5" cy="2.5" r="2.5"></circle>
+            <circle cx="153.5" cy="15.5" r="1.5"></circle>
+            <circle cx="18.5" cy="266.5" r="1.5"></circle>
+            <circle cx="182.5" cy="222.5" r="1.5"></circle>
+            <circle cx="6" cy="104" r="2"></circle>
+        </g>
+        <g transform="translate(419, 347) rotate(24) translate(-419, -347) translate(286, 223)">
+            <circle cx="72.9397394" cy="48.6527778" r="2.5"></circle>
+            <circle cx="203.281759" cy="66.7361111" r="1"></circle>
+            <circle cx="51.7915309" cy="153.277778" r="1.5"></circle>
+            <circle cx="206.302932" cy="156.722222" r="1.5"></circle>
+            <circle cx="184.291531" cy="134.763889" r="2"></circle>
+            <circle cx="129.910423" cy="97.7361111" r="1"></circle>
+            <circle cx="90.2035831" cy="99.4583333" r="1"></circle>
+            <circle cx="1.72638436" cy="10.3333333" r="1.5"></circle>
+            <circle cx="104.014658" cy="246.708333" r="1"></circle>
+            <circle cx="263.705212" cy="117.541667" r="1"></circle>
+            <circle cx="255.07329" cy="2.15277778" r="2"></circle>
+            <circle cx="132.5" cy="13.3472222" r="1"></circle>
+            <circle cx="15.9690554" cy="229.486111" r="1"></circle>
+            <circle cx="157.532573" cy="191.597222" r="1"></circle>
+            <circle cx="5.17915309" cy="89.5555556" r="1.5"></circle>
+        </g>
+        <g transform="translate(386, 207) rotate(24) translate(-386, -207) translate(253, 83)">
+            <circle cx="72.9397394" cy="48.6527778" r="2"></circle>
+            <circle cx="203.281759" cy="66.7361111" r="1"></circle>
+            <circle cx="51.7915309" cy="153.277778" r="1.5"></circle>
+            <circle cx="206.302932" cy="156.722222" r="1.5"></circle>
+            <circle cx="184.291531" cy="134.763889" r="2"></circle>
+            <circle cx="129.910423" cy="97.7361111" r="1"></circle>
+            <circle cx="90.2035831" cy="99.4583333" r="1"></circle>
+            <circle cx="1.72638436" cy="10.3333333" r="1.5"></circle>
+            <circle cx="104.014658" cy="246.708333" r="1"></circle>
+            <circle cx="263.705212" cy="117.541667" r="1"></circle>
+            <circle cx="255.07329" cy="2.15277778" r="2"></circle>
+            <circle cx="132.5" cy="13.3472222" r="1"></circle>
+            <circle cx="15.9690554" cy="229.486111" r="1"></circle>
+            <circle cx="157.532573" cy="191.597222" r="1"></circle>
+            <circle cx="5.17915309" cy="89.5555556" r="1.5"></circle>
+        </g>
+        <g transform="translate(197, 347) rotate(24) translate(-197, -347) translate(64, 223)">
+            <circle cx="72.9397394" cy="48.6527778" r="2"></circle>
+            <circle cx="203.281759" cy="66.7361111" r="1"></circle>
+            <circle cx="51.7915309" cy="153.277778" r="1.5"></circle>
+            <circle cx="206.302932" cy="156.722222" r="1.5"></circle>
+            <circle cx="184.291531" cy="134.763889" r="2"></circle>
+            <circle cx="129.910423" cy="97.7361111" r="1"></circle>
+            <circle cx="90.2035831" cy="99.4583333" r="1"></circle>
+            <circle cx="1.72638436" cy="10.3333333" r="1.5"></circle>
+            <circle cx="104.014658" cy="246.708333" r="1"></circle>
+            <circle cx="263.705212" cy="117.541667" r="1"></circle>
+            <circle cx="255.07329" cy="2.15277778" r="2"></circle>
+            <circle cx="132.5" cy="13.3472222" r="1"></circle>
+            <circle cx="15.9690554" cy="229.486111" r="1"></circle>
+            <circle cx="157.532573" cy="191.597222" r="1"></circle>
+            <circle cx="5.17915309" cy="89.5555556" r="1.5"></circle>
+        </g>
+        <g opacity="0.3" transform="translate(458, 152) rotate(24) translate(-458, -152) translate(325, 28)">
+            <circle cx="72.9397394" cy="48.6527778" r="2"></circle>
+            <circle cx="203.281759" cy="66.7361111" r="1"></circle>
+            <circle cx="51.7915309" cy="153.277778" r="1.5"></circle>
+            <circle cx="206.302932" cy="156.722222" r="1.5"></circle>
+            <circle cx="184.291531" cy="134.763889" r="2"></circle>
+            <circle cx="129.910423" cy="97.7361111" r="1"></circle>
+            <circle cx="90.2035831" cy="99.4583333" r="1"></circle>
+            <circle cx="104.014658" cy="246.708333" r="1"></circle>
+            <circle cx="263.705212" cy="117.541667" r="1"></circle>
+            <circle cx="132.5" cy="13.3472222" r="1"></circle>
+            <circle cx="15.9690554" cy="229.486111" r="1"></circle>
+            <circle cx="157.532573" cy="191.597222" r="1"></circle>
+            <circle cx="5.17915309" cy="89.5555556" r="1.5"></circle>
+        </g>
+        <g transform="translate(222, 528) rotate(24) translate(-222, -528) translate(89, 404)">
+            <circle cx="72.9397394" cy="48.6527778" r="2"></circle>
+            <circle cx="203.281759" cy="66.7361111" r="1"></circle>
+            <circle cx="51.7915309" cy="153.277778" r="1.5"></circle>
+            <circle cx="206.302932" cy="156.722222" r="1.5"></circle>
+            <circle cx="184.291531" cy="134.763889" r="2"></circle>
+            <circle cx="129.910423" cy="97.7361111" r="1"></circle>
+            <circle cx="90.2035831" cy="99.4583333" r="1"></circle>
+            <circle cx="1.72638436" cy="10.3333333" r="1.5"></circle>
+            <circle cx="104.014658" cy="246.708333" r="1"></circle>
+            <circle cx="263.705212" cy="117.541667" r="1"></circle>
+            <circle cx="255.07329" cy="2.15277778" r="2"></circle>
+            <circle cx="132.5" cy="13.3472222" r="1"></circle>
+            <circle cx="15.9690554" cy="229.486111" r="1"></circle>
+            <circle cx="157.532573" cy="191.597222" r="1"></circle>
+            <circle cx="5.17915309" cy="89.5555556" r="1.5"></circle>
+        </g>
+        <g opacity="0.2" transform="translate(26, 473)">
+            <circle cx="84.5" cy="56.5" r="2.5"></circle>
+            <circle cx="235.5" cy="77.5" r="1.5"></circle>
+            <circle cx="60" cy="178" r="2"></circle>
+            <circle cx="239" cy="182" r="2"></circle>
+            <circle cx="213.5" cy="156.5" r="2.5"></circle>
+            <circle cx="150.5" cy="113.5" r="1.5"></circle>
+            <circle cx="104.5" cy="115.5" r="1.5"></circle>
+            <circle cx="2" cy="12" r="2"></circle>
+            <circle cx="120.5" cy="286.5" r="1.5"></circle>
+            <circle cx="305.5" cy="136.5" r="1.5"></circle>
+            <circle cx="295.5" cy="2.5" r="2.5"></circle>
+            <circle cx="153.5" cy="15.5" r="1.5"></circle>
+            <circle cx="18.5" cy="266.5" r="1.5"></circle>
+            <circle cx="182.5" cy="222.5" r="1.5"></circle>
+            <circle cx="6" cy="104" r="2"></circle>
+        </g>
+    </g>
+</svg>
