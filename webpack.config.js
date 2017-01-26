@@ -45,10 +45,6 @@ var config = {
             }
         ]
     },
-    babel: {
-        cacheDirectory: true,
-        presets: ['es2015', 'react', 'stage-2']
-    },
     plugins: [
         new ExtractTextPlugin('[name].css'),
         new StyleLintPlugin({
