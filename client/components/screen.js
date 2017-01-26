@@ -63,7 +63,7 @@ export default class Screen extends Component {
                     <h1 className="screen__title">{title}</h1>
                     {backUrl && <Link to={backUrl} className="screen__back"><Icon name="back" text="Back" /></Link>}
                 </header>
-                <div className="screen__content">{children}</div>
+                {children}
             </div>
         )
     }
