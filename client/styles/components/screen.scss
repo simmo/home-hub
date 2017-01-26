@@ -8,7 +8,7 @@ $action-width: 1.3125rem;
     height: 100%;
     -webkit-overflow-scrolling: touch;
     overflow-y: auto;
-    padding-top: $screen-header;
+    padding: ($screen-header + $gutter) $gutter $gutter;
     position: relative;
 
     &__header {
@@ -90,11 +90,5 @@ $action-width: 1.3125rem;
         svg {
             fill: $colour-white;
         }
-    }
-
-    &__content {
-        box-sizing: border-box;
-        min-height: 100%;
-        padding: $gutter;
     }
 }
