@@ -1,11 +1,7 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import Error from 'components/error'
 
-const NoMatchContainer = ({ location }) =>
+const NoMatchContainer = () =>
     <Error message="Sorry, that page doesn't exist" details={{ code: 404, message: `${location.pathname} was not found` }} cta="/" ctaText="Back to dashboard" />
-
-NoMatchContainer.propTypes = {
-    location: PropTypes.object.isRequired
-}
 
 export default NoMatchContainer
