@@ -39,14 +39,5 @@
     &__modules {
         display: flex;
         flex: 1;
-        flex-flow: row wrap;
-        margin: ($gutter / 4) -#{$gutter / 4} -#{$gutter / 4};
-    }
-
-    &__module {
-        box-sizing: border-box;
-        display: flex;
-        flex: 0 50%;
-        padding: $gutter / 4;
     }
 }
