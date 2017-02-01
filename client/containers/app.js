@@ -10,7 +10,7 @@ import WifiContainer from 'containers/wifi'
 import NoMatchContainer from 'containers/no-match'
 import ModalContainer from 'containers/modal'
 import Unlock from 'components/unlock'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import 'styles/components/app'
 
@@ -101,11 +101,13 @@ class App extends Component {
                     <div className="app__background" />
                     {app.locked && <Unlock handleUnlock={actions.unlock} />}
                     {!app.locked && <div className={classnames('app__screen', { 'app__screen--blurred': app.modal })}>
-                        <Route exactly pattern="/" component={DashboardContainer} />
-                        <Route pattern="/lights" component={LightsContainer} />
-                        <Route pattern="/trains" component={TrainsContainer} />
-                        <Route pattern="/wifi" component={WifiContainer} />
-                        <Route component={NoMatchContainer} />
+                        <Switch>
+                            <Route exact path="/" component={DashboardContainer} />
+                            <Route path="/lights" component={LightsContainer} />
+                            <Route path="/trains" component={TrainsContainer} />
+                            <Route path="/wifi" component={WifiContainer} />
+                            <Route component={NoMatchContainer} />
+                        </Switch>
                     </div>}
                     {app.modal && <div className="app__modal">
                         <ModalContainer />
