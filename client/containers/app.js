@@ -8,7 +8,7 @@ import LightsContainer from 'containers/lights'
 import TrainsContainer from 'containers/trains'
 import WifiContainer from 'containers/wifi'
 import NoMatchContainer from 'containers/no-match'
-import Modal from 'components/modal'
+import ModalContainer from 'containers/modal'
 import Unlock from 'components/unlock'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
@@ -108,7 +108,7 @@ class App extends Component {
                         <Route component={NoMatchContainer} />
                     </div>}
                     {app.modal && <div className="app__modal">
-                        <Modal message={app.modal.message} confirmText="Yes, supersize me" handleCancel={app.modal.handleCancel} handleConfirm={app.modal.handleConfirm} />
+                        <ModalContainer />
                     </div>}
                 </div>
             </Router>
