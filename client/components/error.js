@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { Motion, spring, presets } from 'react-motion'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 import 'styles/components/error'
 
