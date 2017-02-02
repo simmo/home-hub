@@ -20,6 +20,7 @@ const linkedFiles       = ['config.json', 'ecosystem.json']
 
 var revision            = null
 var localUser           = null
+var tag                 = null
 
 var envs = {
     production: {
@@ -129,11 +130,12 @@ var deploy = {
                 const fetchReleaseSha = transport.exec(`git rev-list --max-count=1 --abbrev-commit --abbrev=12 ${branch}`)
 
                 revision = fetchReleaseSha.code === 0 ? fetchReleaseSha.stdout.trim() : 'unknown'
+                tag = transport.exec('git describe --abbrev=0').stdout.trim()
             })
 
             // 6) Run npm install and build
             // transport.verbose()
-            transport.with(`cd ${releasePath}; export NODE_ENV=${transport._context.target}`, () => {
+            transport.with(`cd ${releasePath}; export REVISION=${tag}; export NODE_ENV=${transport._context.target}`, () => {
                 transport.sudo('yarn install')
                 transport.sudo('yarn run build')
             })
