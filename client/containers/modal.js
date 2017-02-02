@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { mapStateToProps, mapDispatchToProps } from 'utilities/store'
-import { openModal, closeModal } from 'modules/app'
+import { closeModal } from 'modules/app'
 import Modal from 'components/modal'
 
 class ModalContainer extends Component {
@@ -32,4 +32,4 @@ class ModalContainer extends Component {
     }
 }
 
-export default connect(mapStateToProps(['app']), mapDispatchToProps({ openModal, closeModal }))(ModalContainer)
+export default connect(mapStateToProps(['app']), mapDispatchToProps({ closeModal }))(ModalContainer)
