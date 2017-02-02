@@ -3,7 +3,7 @@ import { Motion, spring, presets } from 'react-motion'
 
 import 'styles/components/modal'
 
-class Modal extends Component {
+export default class Modal extends Component {
     static propTypes = {
         handleCancel: PropTypes.func,
         handleConfirm: PropTypes.func.isRequired,
@@ -39,5 +39,3 @@ class Modal extends Component {
         )
     }
 }
-
-export default Modal

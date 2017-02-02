@@ -43,6 +43,8 @@ const ICON_MAP = {
     'wind': <Wind />
 }
 
+const IconsAvailable = Object.keys(ICON_MAP)
+
 const Icon = ({ name, text }) =>
     <span className={`icon icon--${name}`}>
         {ICON_MAP[name]}
@@ -55,3 +57,4 @@ Icon.propTypes = {
 }
 
 export default Icon
+export { IconsAvailable }
