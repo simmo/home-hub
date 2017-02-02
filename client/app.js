@@ -7,6 +7,13 @@ import 'fullscreen-api-polyfill'
 
 import 'styles/app'
 
+window.console && console.log([
+    'HomeHub',
+    '=======',
+    `Release: ${__RELEASE__}`,
+    `Env:     ${__DEV__ ? 'Development' : 'Production'}`
+].join('\n'))
+
 render(
     <Provider store={store}>
         <AppContainer />

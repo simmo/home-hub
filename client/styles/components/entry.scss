@@ -1,0 +1,41 @@
+@import 'styles/variables';
+
+.entry {
+    align-items: center;
+    display: flex;
+
+    &__text {
+        flex: 1;
+        margin-right: $gutter / 4;
+    }
+
+    &__heading {
+        font-size: .875rem;
+        font-weight: 600;
+        margin-bottom: .1rem;
+    }
+
+    &__description {
+        font-size: .75rem;
+    }
+
+    &__stat {
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1;
+        margin-left: $gutter / 4;
+        padding-top: .2em;
+        text-align: right;
+        width: 2rem;
+    }
+
+    &__icon {
+        margin-left: $gutter / 4;
+        margin-right: $gutter / 4;
+        width: 3rem;
+
+        svg {
+            fill: $colour-white;
+        }
+    }
+}

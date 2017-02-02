@@ -6,12 +6,11 @@ import { calculateTimeOfDay, fetchCoords, lock, unlock, openModal, closeModal } 
 import DashboardContainer from 'containers/dashboard'
 import LightsContainer from 'containers/lights'
 import TrainsContainer from 'containers/trains'
-import WeatherContainer from 'containers/weather'
 import WifiContainer from 'containers/wifi'
 import NoMatchContainer from 'containers/no-match'
-import Modal from 'components/modal'
+import ModalContainer from 'containers/modal'
 import Unlock from 'components/unlock'
-import { BrowserRouter, Match, Miss } from 'react-router'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import 'styles/components/app'
 
@@ -46,7 +45,7 @@ class App extends Component {
     }
 
     promptFullscreen() {
-        if (!document.fullscreenElement) {
+        if (!__DEV__ && !document.fullscreenElement) {
             this.props.actions.openModal({
                 confirmCta: 'Yes, supersize me',
                 message: 'Would you like to run in fullscreen mode?',
@@ -97,23 +96,24 @@ class App extends Component {
         })
 
         return (
-            <BrowserRouter>
+            <Router>
                 <div className={classes} ref={(node) => this.root = node}>
                     <div className="app__background" />
                     {app.locked && <Unlock handleUnlock={actions.unlock} />}
                     {!app.locked && <div className={classnames('app__screen', { 'app__screen--blurred': app.modal })}>
-                        <Match exactly pattern="/" component={DashboardContainer} />
-                        <Match pattern="/lights" component={LightsContainer} />
-                        <Match pattern="/trains" component={TrainsContainer} />
-                        <Match pattern="/weather" component={WeatherContainer} />
-                        <Match pattern="/wifi" component={WifiContainer} />
-                        <Miss component={NoMatchContainer} />
+                        <Switch>
+                            <Route exact path="/" component={DashboardContainer} />
+                            <Route path="/lights" component={LightsContainer} />
+                            <Route path="/trains" component={TrainsContainer} />
+                            <Route path="/wifi" component={WifiContainer} />
+                            <Route component={NoMatchContainer} />
+                        </Switch>
                     </div>}
                     {app.modal && <div className="app__modal">
-                        <Modal message={app.modal.message} confirmText="Yes, supersize me" handleCancel={app.modal.handleCancel} handleConfirm={app.modal.handleConfirm} />
+                        <ModalContainer />
                     </div>}
                 </div>
-            </BrowserRouter>
+            </Router>
         )
     }
 

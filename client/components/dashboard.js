@@ -1,37 +1,38 @@
 import React, { PropTypes } from 'react'
-import Module from 'components/module'
+import Entry from 'components/weather/entry'
+import Listing from 'components/listing'
+import Modules from 'components/modules'
+import Loader from 'components/loader'
 import Time from 'components/time'
 
 import 'styles/components/dashboard'
 
-const Dashboard = ({ time }) =>
+const Dashboard = ({ time, weather }) =>
     <div className="dashboard">
         <div className="dashboard__home">
             <div className="dashboard__time">
                 <Time moment={time} />
             </div>
             <div className="dashboard__weather">
-                Weather coming soon...
+                {!weather.data && weather.isFetching && <Loader inline={true} message="Fetching weather" />}
+                {weather.data && <Listing>
+                    <Entry
+                        description={weather.data.currently.summary}
+                        heading={weather.data.location}
+                        icon={weather.data.currently.icon}
+                        stat={`${Math.round(weather.data.currently.temperature)}°`}
+                    />
+                </Listing>}
             </div>
         </div>
         <div className="dashboard__modules">
-            <div className="dashboard__module">
-                <Module icon="wifi" title="WiFi" url="/wifi" />
-            </div>
-            <div className="dashboard__module">
-                <Module icon="light-bulb" title="Lights" url="/lights" />
-            </div>
-            <div className="dashboard__module">
-                <Module icon="train" title="Trains" url="/trains" />
-            </div>
-            <div className="dashboard__module">
-                <Module icon="smoke-co" title="Smoke & CO" url="/smoke-co" />
-            </div>
+            <Modules />
         </div>
     </div>
 
 Dashboard.propTypes = {
-    time: PropTypes.object.isRequired
+    time: PropTypes.object.isRequired,
+    weather: PropTypes.object.isRequired
 }
 
 export default Dashboard

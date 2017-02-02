@@ -29,23 +29,23 @@
     }
 
     &--clear-day {
-        padding-top: 100%;
+        padding-top: 89.09%;
     }
 
     &--clear-night {
-        padding-top: 100%;
+        @extend %square;
     }
 
     &--cloudy {
-        padding-top: 100%;
+        padding-top: 73.33%;
     }
 
     &--cog {
-        padding-top: 100%;
+        @extend %square;
     }
 
     &--fog {
-        padding-top: 100%;
+        padding-top: 9318%;
     }
 
     &--forward {
@@ -57,19 +57,19 @@
     }
 
     &--partly-cloudy-day {
-        padding-top: 100%;
+        padding-top: 89.09%;
     }
 
     &--partly-cloudy-night {
-        padding-top: 100%;
+        padding-top: 86.95%;
     }
 
     &--rain {
-        padding-top: 100%;
+        @extend %square;
     }
 
     &--sleet {
-        padding-top: 100%;
+        padding-top: 107.31%;
     }
 
     &--smoke-co {
@@ -77,11 +77,11 @@
     }
 
     &--snow {
-        padding-top: 100%;
+        padding-top: 88.63%;
     }
 
     &--thermometer {
-        padding-top: 100%;
+        padding-top: 225%;
     }
 
     &--train {
@@ -89,7 +89,7 @@
     }
 
     &--umbrella {
-        padding-top: 100%;
+        padding-top: 77.27%;
     }
 
     &--wifi {
@@ -97,6 +97,6 @@
     }
 
     &--wind {
-        padding-top: 100%;
+        padding-top: 63.63%;
     }
 }

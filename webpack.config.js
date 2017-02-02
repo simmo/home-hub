@@ -8,7 +8,8 @@ const is = {
     js: /\.js$/,
     nodeModules: /node_modules/,
     scss: /\.scss$/,
-    svg: /\.svg$/
+    svg: /\.svg$/,
+    production: process.env.NODE_ENV === 'production'
 }
 
 var config = {
@@ -45,15 +46,16 @@ var config = {
             }
         ]
     },
-    babel: {
-        cacheDirectory: true,
-        presets: ['es2015', 'react', 'stage-2']
-    },
     plugins: [
         new ExtractTextPlugin('[name].css'),
         new StyleLintPlugin({
             failAfterError: false,
             quiet: true
+        }),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+            '__DEV__': JSON.stringify(!is.production),
+            '__RELEASE__': JSON.stringify(process.env.RELEASE || 'N/A')
         })
     ],
     postcss: [
@@ -73,24 +75,12 @@ var config = {
 }
 
 // If production build
-if (process.env.NODE_ENV === 'production') {
+if (is.production) {
     config.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
             }
-        })
-    )
-    config.plugins.push(
-        new webpack.DefinePlugin({
-            '__DEV__': 'false',
-            'process.env.NODE_ENV': '"production"'
-        })
-    )
-} else {
-    config.plugins.push(
-        new webpack.DefinePlugin({
-            '__DEV__': 'true'
         })
     )
 }

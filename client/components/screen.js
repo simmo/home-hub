@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import classnames from 'classnames'
 import throttle from 'lodash.throttle'
 import Icon from 'components/icon'

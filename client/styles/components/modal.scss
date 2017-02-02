@@ -25,8 +25,13 @@
         color: rgba($colour-black, .6);
         flex: 1;
         font-size: .8rem;
+        outline: 0;
         padding: $gutter / 2;
         text-transform: uppercase;
+
+        &:focus {
+            background-color: $colour-grey;
+        }
 
         &:first-child {
             border-bottom-right-radius: $radius;
@@ -42,6 +47,10 @@
             background-color: $colour-green;
             color: $colour-white;
             font-weight: 600;
+
+            &:focus {
+                background-color: $colour-dark-green;
+            }
         }
     }
 }

@@ -1,6 +1,8 @@
 @import 'styles/variables';
 
 .listing {
+    width: 100%;
+
     &__item {
         & + & {
             border-top: .1rem solid rgba($colour-white, .2);
