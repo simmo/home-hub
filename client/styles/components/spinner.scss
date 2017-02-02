@@ -1,0 +1,21 @@
+@import 'styles/variables';
+@import 'styles/animations/spin';
+
+.spinner {
+    padding-top: 100%;
+    position: relative;
+
+    &::before {
+        animation: spin cubic-bezier(.49, .72, .67, .34) .7s infinite;
+        border: .2rem solid transparent;
+        border-radius: 100%;
+        border-top-color: $colour-white;
+        bottom: 0;
+        content: '';
+        display: block;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
