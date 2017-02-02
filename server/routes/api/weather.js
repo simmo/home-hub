@@ -14,17 +14,25 @@ router.get('/:location', (req, res, next) => {
 
         res.json(data)
     } else {
-        axios.get(`https://api.forecast.io/forecast/${req.app.locals.forecast.apiKey}/${req.params.location}?${querystring.stringify(req.query)}`)
-            .then(response => {
-                const data = formatWeatherData(response.data)
+        Promise.all([
+            axios.get(`http://maps.googleapis.com/maps/api/geocode/json?latlng=${req.params.location}&sensor=true`)
+                .then((response, error) => {
+                    if (error) {
+                        return null
+                    }
 
-                res.status(response.status).json(data)
-            })
-            .catch(response => {
-                if (response) {
-                    next(response)
-                }
-            })
+                    const { data: { results: [ { address_components: address } ] } } = response
+                    const locality = address && address.find(item => item.types.includes('locality'))
+
+                    return locality && locality.long_name
+                }),
+            axios.get(`https://api.forecast.io/forecast/${req.app.locals.forecast.apiKey}/${req.params.location}?${querystring.stringify(req.query)}`)
+                .then(response => {
+                    const data = formatWeatherData(response.data)
+                    return data
+                })
+                .catch(response => response && next(response))
+        ]).then(([ location, weather ]) => res.json(Object.assign({}, weather, { location })))
     }
 })
 

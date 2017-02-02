@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { Motion, spring, presets } from 'react-motion'
-import Spinner from 'components/spinner'
+import Loader from 'components/loader'
 
 import 'styles/components/loading'
 
@@ -8,20 +8,13 @@ const Loading = ({ message }) =>
     <Motion defaultStyle={{opacity: 0, zoom: .5}} style={{ opacity: spring(1, presets.wobbly), zoom: spring(1, presets.wobbly) }}>
         {value =>
             <div className="loading" style={{ opacity: value.opacity, transform: `scale(${value.zoom})` }}>
-                <div className="loading__spinner">
-                    <Spinner />
-                </div>
-                <p className="loading__message">{message}</p>
+                <Loader message={message} />
             </div>
         }
     </Motion>
 
-Loading.defaultProps = {
-    message: 'Loading...'
-}
-
 Loading.propTypes = {
-    message: PropTypes.string.isRequired
+    message: PropTypes.string
 }
 
 export default Loading
