@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { mapStateToProps, mapDispatchToProps } from 'utilities/store'
+import { mapStateToProps, mapDispatchToProps } from 'utilities/store/helpers'
 import Dashboard from 'components/dashboard'
 import { fetchCoords } from 'modules/app'
 import { load as loadWeather } from 'modules/weather'

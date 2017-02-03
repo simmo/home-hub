@@ -1,8 +1,8 @@
-const autoprefixer = require('autoprefixer')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
 const webpack = require('webpack')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
+const CircularDependencyPlugin = require('circular-dependency-plugin')
 
 const is = {
     js: /\.js$/,
@@ -14,40 +14,61 @@ const is = {
 
 var config = {
     entry: {
-        app: ['./client/app']
+        app: [
+            './client/app'
+        ]
     },
     output: {
         path: path.resolve('public'),
         filename: '[name].js'
     },
     module: {
-        preLoaders: [
+        rules: [
             {
                 test: is.js,
                 exclude: [is.nodeModules],
-                loader: 'eslint'
-            }
-        ],
-        loaders: [
+                enforce: 'pre',
+                use: 'eslint-loader'
+            },
             {
                 test: is.js,
                 exclude: [is.nodeModules],
-                loader: 'babel'
+                use: 'babel-loader'
             },
             {
                 test: is.scss,
                 exclude: [is.nodeModules],
-                loader: ExtractTextPlugin.extract('style', 'css!postcss!sass?&includePaths[]=' + path.resolve(__dirname, './client'))
+                loader: ExtractTextPlugin.extract({
+                    fallbackLoader: 'style-loader',
+                    loader: [
+                        {
+                            loader: 'css-loader',
+                            query: {
+                                modules: false,
+                                sourceMaps: true
+                            }
+                        },
+                        'postcss-loader',
+                        {
+                            loader: 'sass-loader',
+                            query: {
+                                includePaths: [path.resolve(__dirname, './client')]
+                            }
+                        }
+                    ]
+                })
             },
             {
                 test: is.svg,
                 exclude: [is.nodeModules],
-                loaders: ['babel', 'react-svg']
+                use: ['babel-loader', 'react-svg-loader']
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin('[name].css'),
+        new ExtractTextPlugin({
+            filename: '[name].css'
+        }),
         new StyleLintPlugin({
             failAfterError: false,
             quiet: true
@@ -56,11 +77,12 @@ var config = {
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
             '__DEV__': JSON.stringify(!is.production),
             '__RELEASE__': JSON.stringify(process.env.RELEASE || 'N/A')
-        })
-    ],
-    postcss: [
-        autoprefixer({
-            browsers: ['last 2 versions']
+        }),
+        new CircularDependencyPlugin({
+            // exclude detection of files based on a RegExp
+            exclude: /a\.js/,
+            // add errors to webpack instead of warnings
+            failOnError: true
         })
     ],
     stats: {
@@ -69,8 +91,8 @@ var config = {
         version: false
     },
     resolve: {
-        extensions: ['', '.svg', '.scss', '.webpack.js', '.web.js', '.js'],
-        modulesDirectories: ['client', 'node_modules', 'public']
+        extensions: ['.svg', '.scss', '.webpack.js', '.web.js', '.js'],
+        modules: ['node_modules', 'client', 'public']
     }
 }
 
@@ -78,9 +100,7 @@ var config = {
 if (is.production) {
     config.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
+            sourceMap: true
         })
     )
 }

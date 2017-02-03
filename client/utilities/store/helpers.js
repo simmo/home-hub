@@ -1,24 +1,4 @@
-import { applyMiddleware, bindActionCreators, createStore } from 'redux'
-import createLogger from 'redux-logger'
-import promiseCache from 'utilities/middleware/promise'
-import thunk from 'redux-thunk'
-import reducers from 'modules/reducers'
-
-const middlewares = [thunk, promiseCache()]
-
-if (__DEV__) {
-    // Add logging middleware
-    middlewares.push(createLogger({
-        collapsed: true,
-        diff: true,
-        actionTransformer: action => ({
-            ...action,
-            type: String(action.type)
-        })
-    }))
-}
-
-const store = createStore(reducers, applyMiddleware(...middlewares))
+import { bindActionCreators } from 'redux'
 
 export const mapDispatchToProps = actions => dispatch => Object.keys(actions).reduce((obj, key) => {
     obj.actions[key] = bindActionCreators(actions[key], dispatch)
@@ -49,5 +29,3 @@ export function createReducer(initialState = [], handlers = {}) {
         }
     }
 }
-
-export default store

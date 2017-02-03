@@ -1,4 +1,4 @@
-import { createReducer, storeRequiresReload } from 'utilities/store'
+import { createReducer, storeRequiresReload } from 'utilities/store/helpers'
 import SunCalc from 'suncalc'
 import moment from 'moment'
 
