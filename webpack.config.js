@@ -79,9 +79,6 @@ var config = {
             '__RELEASE__': JSON.stringify(process.env.RELEASE || 'N/A')
         }),
         new CircularDependencyPlugin({
-            // exclude detection of files based on a RegExp
-            exclude: /a\.js/,
-            // add errors to webpack instead of warnings
             failOnError: true
         })
     ],
