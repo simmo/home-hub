@@ -3,6 +3,7 @@ const path = require('path')
 const webpack = require('webpack')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 const CircularDependencyPlugin = require('circular-dependency-plugin')
+const BetterLogger = require('./server/utilities/better-logger')
 
 const is = {
     js: /\.js$/,
@@ -80,13 +81,10 @@ var config = {
         }),
         new CircularDependencyPlugin({
             failOnError: true
-        })
+        }),
+        new BetterLogger
     ],
-    stats: {
-        children: false,
-        hash: false,
-        version: false
-    },
+    stats: false,
     resolve: {
         extensions: ['.svg', '.scss', '.webpack.js', '.web.js', '.js'],
         modules: ['node_modules', 'client', 'public']
