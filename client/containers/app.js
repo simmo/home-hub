@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
-import { mapStateToProps, mapDispatchToProps } from 'utilities/store'
+import { mapStateToProps, mapDispatchToProps } from 'utilities/store/helpers'
 import { calculateTimeOfDay, fetchCoords, lock, unlock, openModal, closeModal } from 'modules/app'
 import DashboardContainer from 'containers/dashboard'
 import LightsContainer from 'containers/lights'

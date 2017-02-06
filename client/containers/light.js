@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import throttle from 'lodash.throttle'
-import { mapDispatchToProps } from 'utilities/store'
+import { mapDispatchToProps } from 'utilities/store/helpers'
 import Light from 'components/light'
 import { update } from 'modules/hue'
 

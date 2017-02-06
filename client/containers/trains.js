@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { mapDispatchToProps, mapStateToProps } from 'utilities/store'
+import { mapDispatchToProps, mapStateToProps } from 'utilities/store/helpers'
 import Loading from 'components/loading'
 import Error from 'components/error'
 import Train from 'components/train'

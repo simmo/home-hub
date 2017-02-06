@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { createReducer, storeRequiresReload } from 'utilities/store'
+import { createReducer, storeRequiresReload } from 'utilities/store/helpers'
 
 const LOAD               = 'home-hub/weather/LOAD'
 const LOAD_PENDING       = 'home-hub/weather/LOAD_PENDING'
