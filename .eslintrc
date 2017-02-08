@@ -13,8 +13,8 @@
     "es6": true
   },
   "globals": {
-    "__RELEASE__": true,
-    "__DEV__": true,
+    "_RELEASE": true,
+    "_DEV": true,
   },
   "rules": {
     "complexity": [1, 10],

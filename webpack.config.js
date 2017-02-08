@@ -76,8 +76,8 @@ var config = {
         }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-            '__DEV__': JSON.stringify(!is.production),
-            '__RELEASE__': JSON.stringify(process.env.RELEASE || 'N/A')
+            '_DEV': JSON.stringify(!is.production),
+            '_RELEASE': JSON.stringify(process.env.RELEASE || '0.0.0')
         }),
         new CircularDependencyPlugin({
             failOnError: true

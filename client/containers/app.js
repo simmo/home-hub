@@ -45,7 +45,7 @@ class App extends Component {
     }
 
     promptFullscreen() {
-        if (!__DEV__ && !document.fullscreenElement) {
+        if (!_DEV && !document.fullscreenElement) {
             this.props.actions.openModal({
                 confirmCta: 'Yes, supersize me',
                 message: 'Would you like to run in fullscreen mode?',

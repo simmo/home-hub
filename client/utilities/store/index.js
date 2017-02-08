@@ -6,7 +6,7 @@ import reducers from 'modules/reducers'
 
 const middlewares = [thunk, promiseCache()]
 
-if (__DEV__) {
+if (_DEV) {
     // Add logging middleware
     middlewares.push(createLogger({
         collapsed: true,
