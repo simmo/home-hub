@@ -38,7 +38,7 @@ BetterLogger.prototype.apply = function(compiler) {
             data.warnings.forEach(warning => console.warn('\n' + warning))
         }
 
-        console.log(chalk.dim('\nComplete.\n\n'))
+        console.log(chalk.dim('\nComplete.\n'))
     })
 }
 
