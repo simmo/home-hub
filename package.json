@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --watch -d --hide-modules",
-    "build": "RELEASE=$(git describe --abbrev=0) webpack -p",
+    "build": "RELEASE=$(git describe --abbrev=0) webpack -p --hide-modules",
     "deploy": "fly deploy:production"
   },
   "author": "",
