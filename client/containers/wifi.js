@@ -14,8 +14,20 @@ class WifiContainer extends Component {
         wifi: PropTypes.object.isRequired
     }
 
-    componentWillMount() {
+    refreshTimers = {}
+
+    refreshData() {
         this.props.actions.load()
+
+        this.refreshTimers.load = setTimeout(this.refreshData.bind(this), 1000)
+    }
+
+    componentWillMount() {
+        this.refreshData()
+    }
+
+    componentWillUnmount() {
+        Object.keys(this.refreshTimers).forEach(timer => clearTimeout(this.refreshTimers[timer]))
     }
 
     render() {
