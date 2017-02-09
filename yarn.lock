@@ -3060,7 +3060,7 @@ lodash.uniq@^4.3.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@^4.0.0, lodash@^4.1.0, lodash@^4.14.0, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.1.0, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -4820,6 +4820,14 @@ stylehacks@^2.3.0:
     text-table "^0.2.0"
     write-file-stdout "0.0.2"
 
+stylelint-order@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-0.2.2.tgz#c1fd77cf3565bd223c233b9e7bb98728c0abe8bd"
+  dependencies:
+    lodash "^4.16.6"
+    postcss "^5.2.5"
+    stylelint "^7.5.0"
+
 stylelint-webpack-plugin@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/stylelint-webpack-plugin/-/stylelint-webpack-plugin-0.5.1.tgz#c07a92d9acbdc653a67b66aa3aa4fedde0bfcc9d"
@@ -4829,7 +4837,7 @@ stylelint-webpack-plugin@^0.5.1:
     object-assign "^4.1.0"
     stylelint "^7.7.0"
 
-stylelint@^7.7.0:
+stylelint@^7.5.0, stylelint@^7.7.0:
   version "7.8.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-7.8.0.tgz#ac701044ed03c44f7a9f73d4d5dc1bd1eaae12d1"
   dependencies:

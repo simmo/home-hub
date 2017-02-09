@@ -1,4 +1,7 @@
 {
+    "plugins": [
+      "stylelint-order"
+    ],
     "rules": {
       "at-rule-empty-line-before": [ "always", {
         except: [
@@ -47,7 +50,6 @@
       } ],
       "declaration-block-no-redundant-longhand-properties": true,
       "declaration-block-no-shorthand-property-overrides": true,
-      "declaration-block-properties-order": "alphabetical",
       "declaration-block-semicolon-newline-after": "always-multi-line",
       "declaration-block-semicolon-space-after": "always-single-line",
       "declaration-block-semicolon-space-before": "never",
@@ -100,11 +102,8 @@
       "number-no-trailing-zeros": true,
       "property-case": "lower",
       "property-no-unknown": true,
-      "rule-nested-empty-line-before": [ "always-multi-line", {
+      "rule-empty-line-before": [ "always-multi-line", {
         except: ["first-nested"],
-        ignore: ["after-comment"],
-      } ],
-      "rule-non-nested-empty-line-before": [ "always-multi-line", {
         ignore: ["after-comment"],
       } ],
       "selector-attribute-brackets-space-inside": "never",
@@ -132,5 +131,6 @@
       "value-list-comma-space-after": "always-single-line",
       "value-list-comma-space-before": "never",
       "value-list-max-empty-lines": 0,
+      "order/declaration-block-properties-alphabetical-order": true
     },
 }
