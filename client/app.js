@@ -10,8 +10,8 @@ import 'styles/app'
 window.console && console.log([
     'HomeHub',
     '=======',
-    `Release: ${__RELEASE__}`,
-    `Env:     ${__DEV__ ? 'Development' : 'Production'}`
+    `Release: ${_RELEASE}`,
+    `Env:     ${_DEV ? 'Development' : 'Production'}`
 ].join('\n'))
 
 render(

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { mapStateToProps, mapDispatchToProps } from 'utilities/store'
+import { mapStateToProps, mapDispatchToProps } from 'utilities/store/helpers'
 import { closeModal } from 'modules/app'
 import Modal from 'components/modal'
 

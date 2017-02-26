@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
-import { mapStateToProps, mapDispatchToProps } from 'utilities/store'
+import { mapStateToProps, mapDispatchToProps } from 'utilities/store/helpers'
 import { calculateTimeOfDay, fetchCoords, lock, unlock, openModal, closeModal } from 'modules/app'
 import DashboardContainer from 'containers/dashboard'
 import LightsContainer from 'containers/lights'
@@ -45,7 +45,7 @@ class App extends Component {
     }
 
     promptFullscreen() {
-        if (!__DEV__ && !document.fullscreenElement) {
+        if (!_DEV && !document.fullscreenElement) {
             this.props.actions.openModal({
                 confirmCta: 'Yes, supersize me',
                 message: 'Would you like to run in fullscreen mode?',

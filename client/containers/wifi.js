@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { mapDispatchToProps, mapStateToProps } from 'utilities/store'
+import { mapDispatchToProps, mapStateToProps } from 'utilities/store/helpers'
 import Loading from 'components/loading'
 import Error from 'components/error'
 import { load } from 'modules/wifi'
@@ -14,8 +14,20 @@ class WifiContainer extends Component {
         wifi: PropTypes.object.isRequired
     }
 
-    componentWillMount() {
+    refreshTimers = {}
+
+    refreshData() {
         this.props.actions.load()
+
+        this.refreshTimers.load = setTimeout(this.refreshData.bind(this), 1000)
+    }
+
+    componentWillMount() {
+        this.refreshData()
+    }
+
+    componentWillUnmount() {
+        Object.keys(this.refreshTimers).forEach(timer => clearTimeout(this.refreshTimers[timer]))
     }
 
     render() {

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { mapDispatchToProps, mapStateToProps } from 'utilities/store'
+import { mapDispatchToProps, mapStateToProps } from 'utilities/store/helpers'
 import { load } from 'modules/weather'
 import { fetchCoords } from 'modules/app'
 import Loading from 'components/loading'
@@ -18,11 +18,9 @@ class WeatherContainer extends Component {
         weather: PropTypes.object.isRequired
     }
 
-    componentWillMount() {
-        this.fetchData()
-    }
+    refreshTimers = {}
 
-    fetchData() {
+    refreshData() {
         this.props.actions.fetchCoords().then(() => {
             if (!this.props.app.location.data) {
                 return
@@ -32,6 +30,16 @@ class WeatherContainer extends Component {
 
             this.props.actions.load(latitude, longitude)
         })
+
+        this.refreshTimers.load = setTimeout(this.refreshData.bind(this), 1000)
+    }
+
+    componentWillMount() {
+        this.refreshData()
+    }
+
+    componentWillUnmount() {
+        Object.keys(this.refreshTimers).forEach(timer => clearTimeout(this.refreshTimers[timer]))
     }
 
     render() {

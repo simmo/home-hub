@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { createReducer, storeRequiresReload } from 'utilities/store'
+import { createReducer, storeRequiresReload } from 'utilities/store/helpers'
 
 const LOAD           = 'home-hub/wifi/LOAD'
 const LOAD_PENDING   = 'home-hub/wifi/LOAD_PENDING'
